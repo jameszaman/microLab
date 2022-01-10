@@ -7,6 +7,5 @@ async function getWeatherData(area) {
   return response.data;
 }
 
-getWeatherData('dhaka')
-.then(data => console.log(data));
+module.exports.getWeatherData = getWeatherData;
 
