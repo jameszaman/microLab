@@ -16,14 +16,41 @@
     <form action="/reminder/new" method="POST">
       <legend>New Reminder</legend>
       <label for="reminderText">Reminder</label>
-      <textarea name="reminderText" id="reminderText" placeholder="What do you want us to remind you?" required>
-      </textarea>
-      <label for="reminderTime">Reminder Time</label>
+      <textarea name="reminderText" id="reminderText" placeholder="What do you want us to remind you?" required></textarea>
+      <label for="reminder-type">
+        Reminder Type
+      </label>
+      <!-- Selecting the type of input and chaning what shows up on the form based on that. -->
+      <select id="reminder-type" name="type">
+        <option value="once" selected>One Time</option>
+        <option value="repeat">Repeat</option>
+      </select>
       <div id="once-reminder-option">
+        <label for="reminderTime">Reminder Time</label>
         <input type="datetime-local" name="reminderTime" id="reminderTime" required>
-        <button>ADD REMINDER</button>
       </div>
+      <div id="repeat-reminder-option" class="repeat-reminder-option hidden">
+        <label for="repeat-days">Days To Repeat</label>
+        <div class="checkboxes">
+          <input type="checkbox" id="sat">
+          <label for="sat">Saturday</label>
+          <input type="checkbox" id="sun">
+          <label for="sun">Sunday</label>
+          <input type="checkbox" id="mon">
+          <label for="mon">Monday</label>
+          <input type="checkbox" id="tue">
+          <label for="tue">Tuesday</label>
+          <input type="checkbox" id="wed">
+          <label for="wed">Wednesday</label>
+          <input type="checkbox" id="thu">
+          <label for="thu">Thursday</label>
+          <input type="checkbox" id="fri">
+          <label for="fri">Friday</label>
+        </div>
+      </div>
+      <button>ADD REMINDER</button>
     </form>
+    <script type="text/javascript" src="/js/reminder.js"></script>
   </main>
 </body>
 </html>
