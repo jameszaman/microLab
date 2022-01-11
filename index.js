@@ -6,6 +6,7 @@ const app = express();
 
 // requiring routers.
 const baseRouter = require("./routes/baseRouter");
+const reminderRouter = require("./routes/reminderRouter");
 
 // Setting static folders.
 app.use(express.static("public"));
@@ -18,6 +19,7 @@ app.set("view engine", "ejs");
 
 // Using the routers to set up routes.
 app.use("/", baseRouter);
+app.use("/reminder", reminderRouter);
 
 // Starting the server.
 const port = process.env.PORT || 3000;
