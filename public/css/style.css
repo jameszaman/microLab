@@ -1,0 +1,25 @@
+/* Importin necessary fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Necessary variables. */
+:root {
+  --blk-prm: rgb(32, 33, 36);
+  --blk-sec: rgb(48, 49, 52);
+}
+
+/* Basic styling */
+body {
+  min-height: 100vh;
+  background-color: var(--blk-prm);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+
