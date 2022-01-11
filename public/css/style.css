@@ -25,4 +25,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
+/* Classes for all pages to use */
+.hidden {
+  display: none;
+}

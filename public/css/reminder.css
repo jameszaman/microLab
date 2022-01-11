@@ -11,7 +11,7 @@ form {
   color: var(--blk-sec);
 }
 
-form > *:not(label) {
+form  *:not(label) {
   font-family: "Roboto";
   font-size: 1.3rem;
   margin-bottom: 1.75rem;
@@ -45,6 +45,22 @@ form button {
   cursor: pointer;
   border-radius: 0.3em;
 }
+
 form button:hover {
   background-color: var(--purple-sec);
+}
+
+form select {
+  cursor: pointer;
+}
+
+
+form div * {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+form .checkboxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
