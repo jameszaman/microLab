@@ -3,6 +3,7 @@ nav {
   display: flex;
   justify-content: left;
   border-bottom: 1px solid gray;
+  padding: 0 1rem;
 }
 
 nav a {

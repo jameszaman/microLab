@@ -5,13 +5,16 @@
 * {
   margin: 0;
   padding: 0;
-  
 }
 
 /* Necessary variables. */
 :root {
   --blk-prm: rgb(32, 33, 36);
   --blk-sec: rgb(48, 49, 52);
+  --purple-prm: hsl(236, 75%, 65%);
+  --purple-sec: hsl(236, 75%,72%);
+  --gray-prm: hsl(0, 0%, 1%);
+  --gray-sec: hsl(0, 0%, 77%);
 }
 
 /* Basic styling */

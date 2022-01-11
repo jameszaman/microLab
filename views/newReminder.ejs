@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/reminder.css">
   <title>New Reminder</title>
 </head>
 <body>
@@ -18,7 +19,8 @@
       <textarea name="reminderText" id="reminderText" placeholder="What do you want us to remind you?" required>
       </textarea>
       <label for="reminderTime">Reminder Time</label>
-      <input type="datetime" name="reminderTime" id="reminderTime" required>
+      <input type="datetime-local" name="reminderTime" id="reminderTime" required>
+      <button>ADD REMINDER</button>
     </form>
   </main>
 </body>
