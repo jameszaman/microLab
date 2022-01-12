@@ -4,6 +4,10 @@ const express = require("express");
 // The main object we will work with.
 const app = express();
 
+// For parsing form data.
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // requiring routers.
 const baseRouter = require("./routes/baseRouter");
 const reminderRouter = require("./routes/reminderRouter");

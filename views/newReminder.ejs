@@ -21,30 +21,30 @@
         Reminder Type
       </label>
       <!-- Selecting the type of input and chaning what shows up on the form based on that. -->
-      <select id="reminder-type" name="type">
+      <select id="reminder-type" name="reminderType">
         <option value="once" selected>One Time</option>
         <option value="repeat">Repeat</option>
       </select>
       <div id="once-reminder-option">
-        <label for="reminderTime">Reminder Time</label>
-        <input type="datetime-local" name="reminderTime" id="reminderTime" required>
+        <label for="reminder-time">Reminder Time</label>
+        <input type="datetime-local" name="reminderTime" id="reminder-time" required>
       </div>
       <div id="repeat-reminder-option" class="repeat-reminder-option hidden">
         <label for="repeat-days">Days To Repeat</label>
         <div class="checkboxes">
-          <input type="checkbox" id="sat">
+          <input name="reminderDays" type="checkbox" id="sat" value="sat">
           <label for="sat">Saturday</label>
-          <input type="checkbox" id="sun">
+          <input name="reminderDays" type="checkbox" id="sun" value="sun">
           <label for="sun">Sunday</label>
-          <input type="checkbox" id="mon">
+          <input name="reminderDays" type="checkbox" id="mon" value="mon">
           <label for="mon">Monday</label>
-          <input type="checkbox" id="tue">
+          <input name="reminderDays" type="checkbox" id="tue" value="tue">
           <label for="tue">Tuesday</label>
-          <input type="checkbox" id="wed">
+          <input name="reminderDays" type="checkbox" id="wed" value="wed">
           <label for="wed">Wednesday</label>
-          <input type="checkbox" id="thu">
+          <input name="reminderDays" type="checkbox" id="thu" value="thu">
           <label for="thu">Thursday</label>
-          <input type="checkbox" id="fri">
+          <input name="reminderDays" type="checkbox" id="fri" value="fri">
           <label for="fri">Friday</label>
         </div>
       </div>
