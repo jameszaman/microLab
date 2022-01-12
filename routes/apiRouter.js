@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 // User defined functions.
 const { getWeatherData } = require('../functions/weatherapi');
-const { getPrayerTimes } = require('../functions/scrape');
+const { getPrayerTimes, getNotices, getCSENotices, getEEENotices } = require('../functions/scrape');
 
 // Database functions.
 const { Reminder } = require('../database/database');
@@ -10,6 +10,20 @@ const { Reminder } = require('../database/database');
 router.get('/', (req, res) => {
   res.render('api');
 });
+
+router.get('/notice', async (req, res) => {
+  let notice = {};
+  if(req.query.department == 'cse') {
+    notice = await getCSENotices();
+  }
+  else if(req.query.department == 'eee') {
+    notice = await getEEENotices();
+  }
+  else {
+    notice = await getNotices();
+  }
+  res.json(notice);
+})
 
 router.get('/weather', async (req, res) => {
   // If a place is given that is the new place
