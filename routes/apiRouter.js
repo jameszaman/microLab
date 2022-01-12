@@ -44,8 +44,8 @@ router.get('/prayertime', async (req, res) => {
 })
 
 router.get('/reminder', async (req, res) => {
-  const allReminders = Reminder.find({});
-  res.json(JSON.parse(allReminders));
+  const allReminders = await Reminder.find({});
+  res.json(allReminders);
 })
 
 
